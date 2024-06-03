@@ -1,6 +1,6 @@
-package io.chagchagchag.oauth2client.oauth2_client_example.member.factory;
+package io.chagchagchag.oauth2client.oauth2_client_example.member.entity.factory;
 
-import io.chagchagchag.oauth2client.oauth2_client_example.member.MemberEntity;
+import io.chagchagchag.oauth2client.oauth2_client_example.member.entity.MemberEntity;
 import io.chagchagchag.oauth2client.oauth2_client_example.member.security.MemberRoles;
 import org.springframework.stereotype.Component;
 

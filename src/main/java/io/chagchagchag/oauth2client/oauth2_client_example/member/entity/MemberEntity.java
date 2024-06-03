@@ -1,4 +1,4 @@
-package io.chagchagchag.oauth2client.oauth2_client_example.member;
+package io.chagchagchag.oauth2client.oauth2_client_example.member.entity;
 
 import java.time.LocalDateTime;
 import java.util.List;
