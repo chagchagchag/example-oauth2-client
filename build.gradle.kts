@@ -28,6 +28,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-redis-reactive")
 	implementation("org.springframework.boot:spring-boot-starter-mustache")
+	implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.5.0")
 
 	// h2
 	runtimeOnly("com.h2database:h2")

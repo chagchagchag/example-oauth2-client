@@ -1,17 +1,8 @@
 spring:
   application:
     name: oauth2_client_example
-  r2dbc:
-    url: r2dbc:mysql://localhost:23306/example?useUnicode=true&serverTimezone=UTC
-    username: user
-    password: test1357
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: # credential 내용 기입
-            client-secret: # credential 내용 기입
-            scope:
-              - email
-              - profile
+  config:
+    import:
+      - classpath:r2dbc-mysql.yml
+      - classpath:security.yml
+      - classpath:springdoc.yml

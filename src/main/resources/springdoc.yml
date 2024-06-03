@@ -1,0 +1,14 @@
+springdoc:
+  default-produces-media-type: application/json;charset=UTF-8
+  default-consumes-media-type: application/json;charset=UTF-8
+  api-docs:
+    path: /api-docs
+    enabled: true # for only dev
+  swagger-ui:
+    enabled: true # for only dev
+    path: /swagger-ui.html
+    try-it-out-enabled: true
+  packages-to-scan: io.chagchagchag.oauth2client.oauth2_client_example
+  cache:
+    disabled: true
+  version: v1

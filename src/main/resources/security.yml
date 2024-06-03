@@ -1,0 +1,11 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1287911441-r8gigkai5bqc76c11fn315eich2ph4l4.apps.googleusercontent.com # credential 내용 기입
+            client-secret: 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 # credential 내용 기입
+            scope:
+              - email
+              - profile
