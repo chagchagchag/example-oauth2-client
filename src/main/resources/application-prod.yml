@@ -5,4 +5,4 @@ spring:
     import:
       - classpath:r2dbc-mysql.yml
       - classpath:security.yml
-      - classpath:springdoc.yml
+      - classpath:springdoc-prod.yml
