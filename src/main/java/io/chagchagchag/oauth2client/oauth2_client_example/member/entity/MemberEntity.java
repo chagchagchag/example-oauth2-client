@@ -1,7 +1,6 @@
 package io.chagchagchag.oauth2client.oauth2_client_example.member.entity;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -45,12 +44,4 @@ public class MemberEntity {
     this(null, name, email, roles);
   }
 
-  // 일반적으로는 getRoleList() 라고 쓰는 편이지만,
-  // Lombok 과 혼동의 여지가 있어서 parse** 으로 지정
-  public List<String> parseRoleList(){
-    if(roles.length() > 0)
-      return List.of(roles.split(","));
-    else
-      return List.of();
-  }
 }
