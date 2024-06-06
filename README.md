@@ -34,5 +34,11 @@ kotlin 을 사용하면 굳이 webflux 를 사용하지 않아도 코루틴으�
 최근 빅테크 회사들은 kotlin 도 쓰고 webflux 를 같이 쓴다. webflux 로 어떤 데이터를 fetch 해올 때 ...block() 과 같이 가져오더라도 코루틴으로 감싸면 비동기적으로 동작하게 된다구. 잊지 말라규.<br/>
 <br/>
 
+참고할 자료 모음
+- [OAuth2 Webflux](https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/reference/html/webflux-oauth2.html)
+- [OAuth2 Webflux](https://docs.spring.io/spring-security/reference/reactive/oauth2/index.html#oauth2-client)
+- [Spring Security OAuth Login with Webflux](https://www.baeldung.com/spring-oauth-login-webflux)
+- [Spring WebFlux and OAuth 2.0](https://rj93.medium.com/spring-webflux-and-oauth-2-0-47e0c32c0a7a)
+- [Spring Security 5 - OAuth2 Login](https://www.baeldung.com/spring-security-5-oauth2-login)
 
 
