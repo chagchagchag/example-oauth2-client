@@ -1,4 +1,4 @@
-package io.chagchagchag.oauth2client.oauth2_client_example.config;
+package io.chagchagchag.oauth2client.oauth2_client_example.config.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
