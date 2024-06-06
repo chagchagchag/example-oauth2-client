@@ -12,7 +12,9 @@ import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 import org.springframework.r2dbc.connection.init.ConnectionFactoryInitializer;
 
 @Profile("h2")
-@EnableR2dbcRepositories
+@EnableR2dbcRepositories(basePackages = {
+    "io.chagchagchag.oauth2client.oauth2_client_example.member.entity"
+})
 @Configuration
 public class H2R2dbcConfig extends AbstractR2dbcConfiguration {
 
