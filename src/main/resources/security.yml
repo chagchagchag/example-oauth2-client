@@ -4,6 +4,8 @@ spring:
       client:
         registration:
           google:
+#            client-id: # ignore/oauth2-client-dev 으로 분리
+#            client-secret: # ignore/oauth2-client-dev 으로 분리
             scope:
               - email
               - profile
