@@ -4,8 +4,6 @@ spring:
       client:
         registration:
           google:
-            client-id: # credential 내용 기입
-            client-secret: # credential 내용 기입
             scope:
               - email
               - profile
