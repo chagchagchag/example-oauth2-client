@@ -1,3 +1,5 @@
+**/src/main/**/ignore/
+
 HELP.md
 .gradle
 build/
@@ -25,7 +27,6 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-**/src/main/**/ignore/
 
 ### NetBeans ###
 /nbproject/private/
