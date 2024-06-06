@@ -12,12 +12,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JwtSupport {
-  public String generateToken(Key key, String userId, String username){
+  public String generateToken(Key key, String userId, String username, String email){
     return Jwts.builder()
         .setSubject(username)
         .setExpiration(new Date(System.currentTimeMillis() + 864000000))
         .claim("id", userId)
-        .claim("username", username)
+        .claim("name", username)
+        .claim("email", email)
         .signWith(key, SignatureAlgorithm.HS256)
         .compact();
   }
@@ -35,7 +36,8 @@ public class JwtSupport {
 
     return new Jwt(
         claimsJws.getBody().get("id", String.class),
-        claimsJws.getBody().get("username", String.class),
+        claimsJws.getBody().get("name", String.class),
+        claimsJws.getBody().get("email", String.class),
         claimsJws.getBody().getExpiration()
     );
   }

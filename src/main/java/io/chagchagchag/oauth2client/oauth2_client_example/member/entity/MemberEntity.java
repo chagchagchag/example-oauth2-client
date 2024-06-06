@@ -19,6 +19,7 @@ public class MemberEntity {
 
   private String name;
   private String email;
+  private String password;
   private String roles;
 
   @CreatedDate
@@ -29,19 +30,20 @@ public class MemberEntity {
 
   @PersistenceCreator
   public MemberEntity(
-      Long id, String name, String email, String roles
+      Long id, String name, String email, String password, String roles
   ){
     this.id = id;
     this.name = name;
     this.email = email;
+    this.password = password;
     this.roles = roles;
   }
 
   @Builder(builderClassName = "CreateUserBuilder", builderMethodName = "createBuilder")
   public MemberEntity(
-      String name, String email, String roles
+      String name, String email, String password, String roles
   ){
-    this(null, name, email, roles);
+    this(null, name, email, password, roles);
   }
 
 }

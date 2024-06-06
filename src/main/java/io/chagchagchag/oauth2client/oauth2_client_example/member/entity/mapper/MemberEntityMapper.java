@@ -1,9 +1,12 @@
 package io.chagchagchag.oauth2client.oauth2_client_example.member.entity.mapper;
 
 import io.chagchagchag.oauth2client.oauth2_client_example.member.entity.MemberEntity;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -25,6 +28,15 @@ public class MemberEntityMapper {
       return List.of(roles.split(","));
     else
       return List.of();
+  }
+
+  public User defaultUserDetails(MemberEntity memberEntity){
+    return new User(
+        memberEntity.getEmail(),
+        memberEntity.getPassword(),
+        true, true, true, true,
+        new ArrayList<GrantedAuthority>()
+    );
   }
 
 }
