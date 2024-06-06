@@ -1,8 +1,0 @@
-spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: # credential 내용 기입 1111
-            client-secret: # credential 내용 기입 1111

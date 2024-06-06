@@ -1,7 +1,0 @@
-springdoc:
-  api-docs:
-    enabled: false
-  swagger-ui:
-    enabled: false
-  packages-to-scan: io.chagchagchag.oauth2client.oauth2_client_example
-  version: v1
