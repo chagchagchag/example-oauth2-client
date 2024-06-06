@@ -3,12 +3,15 @@ package io.chagchagchag.oauth2client.oauth2_client_example.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.DelegatingReactiveAuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
+@Profile({"!h2"})
 @RequiredArgsConstructor
 @EnableWebFluxSecurity
 @EnableReactiveMethodSecurity
@@ -37,13 +40,8 @@ public class SecurityConfig {
               .pathMatchers("/logout", "/api/users/profile/**")
               .hasAnyAuthority("ROLE_USER", "ROLE_MANAGER", "ROLE_ADMIN")
         )
-        .oauth2Login(oAuth2LoginSpec -> oAuth2LoginSpec
-            .authenticationManager(
-                new DelegatingReactiveAuthenticationManager(
-                    // vargs
-                )
-            )
-        )
+        .oauth2Login(Customizer.withDefaults())
+        .oauth2Client(Customizer.withDefaults())
         .build();
 
 //    return http.csrf().disable().headers().frameOptions().disable() // h2-console을 사용하기 위해 옵션 disable

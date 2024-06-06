@@ -31,7 +31,8 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.5.0")
 
 	// h2
-	runtimeOnly("com.h2database:h2")
+//	runtimeOnly("com.h2database:h2")
+	implementation("io.r2dbc:r2dbc-h2")
 
 	// mysql
 	runtimeOnly("com.mysql:mysql-connector-j")
