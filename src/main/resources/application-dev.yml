@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: oauth2_client_example
+  config:
+    import:
+      - classpath:r2dbc-mysql.yml
+      - classpath:security.yml
+      - classpath:ignore/oauth2-client-dev.yml
+      - classpath:springdoc-dev.yml
