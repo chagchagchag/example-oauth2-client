@@ -25,7 +25,7 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-./**/oauth2-client-dev.yml
+!**/src/main/**/ignore/
 
 ### NetBeans ###
 /nbproject/private/

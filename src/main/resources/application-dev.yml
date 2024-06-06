@@ -5,5 +5,5 @@ spring:
     import:
       - classpath:r2dbc-mysql.yml
       - classpath:security.yml
-      - classpath:oauth2-client-dev.yml
+      - classpath:ignore/oauth2-client-dev.yml
       - classpath:springdoc-dev.yml
